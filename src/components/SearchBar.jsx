@@ -22,7 +22,7 @@ const Button = styled.button`
 
 const SearchBar = () => {
   return (
-    <Wrapper>
+    <Wrapper mt="5rem">
       <Form>
         <input
           type="text"
