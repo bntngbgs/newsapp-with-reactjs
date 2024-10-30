@@ -6,18 +6,28 @@ import { Wrapper } from './styles/Wrapper.styled';
 const Form = styled.form`
   width: 70%;
   display: flex;
-  background-color: blue;
   margin: 0 auto;
 
   input {
     width: 100%;
-    /* margin: 0 auto; */
+    border: 2px solid #ffad60;
+    border-radius: 10px 0 0 10px;
+    padding-left: 1rem;
   }
 `;
 
 const Button = styled.button`
   background-color: #ffad60;
   width: 64px;
+  border: 1px solid #ffad60;
+  padding: 0.5rem 1rem;
+  border-radius: 0 10px 10px 0;
+
+  &:hover {
+    background-color: #ffbd80;
+    border-color: #ffbd80;
+    cursor: pointer;
+  }
 `;
 
 const SearchBar = () => {
