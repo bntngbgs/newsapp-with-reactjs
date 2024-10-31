@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import searchIcon from '../assets/search-icon.svg';
 import { Wrapper } from './styles/Wrapper.styled';
+import axios from 'axios';
 
 const Form = styled.form`
   width: 70%;
@@ -31,6 +32,8 @@ const Button = styled.button`
 `;
 
 const SearchBar = () => {
+  const [searchResult, setSearchResult] = useState([]);
+
   return (
     <Wrapper mt="5rem">
       <Form>
