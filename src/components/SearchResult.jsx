@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Wrapper, FlexWrapper } from './styles/Wrapper.styled';
 import styled from 'styled-components';
 import ResultCard from './ResultCard';
-import axios from 'axios';
 import { RotatingLines } from 'react-loader-spinner';
 
 const TitleBar = styled.h1`
@@ -35,27 +34,7 @@ const ErrorMessage = styled.div`
   }
 `;
 
-const SearchResult = () => {
-  const API_KEY = '44ed81f31ec340de8a53e4fef9864583';
-  const [newsData, setNewsData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
-      .then((res) => {
-        setNewsData(res.data.articles);
-        setError(null);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setError(err);
-        setNewsData(null);
-        setIsLoading(false);
-      });
-  }, []);
-
+const SearchResult = ({ data, isLoading, error }) => {
   return (
     <Wrapper mt="5rem">
       <TitleBar>Headline News</TitleBar>
@@ -79,8 +58,8 @@ const SearchResult = () => {
             <p>{`Sorry couldn't fetch data : ${error.message}`}</p>
           </ErrorMessage>
         )}
-        {newsData &&
-          newsData
+        {data &&
+          data
             .slice(0, 9)
             .map((item, index) => (
               <ResultCard
