@@ -38,7 +38,7 @@ const SearchResult = ({ data, isLoading, error, title }) => {
   return (
     <Wrapper mt="5rem">
       <TitleBar>{title}</TitleBar>
-      <FlexWrapper colgap="1rem" rowgap="2rem" width="100%" mt="2rem" mb="2rem">
+      <FlexWrapper colgap="1rem" rowgap="2rem" width="100%" mt="2rem" mb="4rem">
         {isLoading && (
           <LoaderWrapper>
             <RotatingLines
