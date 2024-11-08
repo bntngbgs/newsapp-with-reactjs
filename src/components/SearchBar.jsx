@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import searchIcon from '../assets/search-icon.svg';
 import { Wrapper } from './styles/Wrapper.styled';
-// import axios from 'axios';
 
 const Form = styled.form`
   width: 70%;
@@ -31,17 +30,25 @@ const Button = styled.button`
   }
 `;
 
-const SearchBar = () => {
-  // const [searchResult, setSearchResult] = useState([]);
+const SearchBar = ({ handleSubmit }) => {
+  const [searchValue, setSearchValue] = useState('');
 
   return (
     <Wrapper mt="5rem">
-      <Form>
+      <Form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit(searchValue);
+        }}
+      >
         <input
           type="text"
           name="search"
           id="search"
           placeholder="Search topics..."
+          onChange={(e) => {
+            setSearchValue(e.target.value);
+          }}
         />
         <Button type="submit">
           <img src={searchIcon} alt="search-icon" />

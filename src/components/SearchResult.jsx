@@ -34,10 +34,10 @@ const ErrorMessage = styled.div`
   }
 `;
 
-const SearchResult = ({ data, isLoading, error }) => {
+const SearchResult = ({ data, isLoading, error, title }) => {
   return (
     <Wrapper mt="5rem">
-      <TitleBar>Headline News</TitleBar>
+      <TitleBar>{title}</TitleBar>
       <FlexWrapper colgap="1rem" rowgap="2rem" width="100%" mt="2rem" mb="2rem">
         {isLoading && (
           <LoaderWrapper>
@@ -53,11 +53,7 @@ const SearchResult = ({ data, isLoading, error }) => {
           </LoaderWrapper>
         )}
 
-        {error && (
-          <ErrorMessage>
-            <p>{`Sorry couldn't fetch data : ${error.message}`}</p>
-          </ErrorMessage>
-        )}
+        {error && <ErrorMessage>{<p>{error}</p>}</ErrorMessage>}
         {data &&
           data
             .slice(0, 9)
