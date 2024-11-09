@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/bntngbgs.github.io/newsapp-with-reactjs/static/css/main.4f432160.css",
-    "main.js": "/bntngbgs.github.io/newsapp-with-reactjs/static/js/main.6830c834.js",
-    "index.html": "/bntngbgs.github.io/newsapp-with-reactjs/index.html",
-    "static/media/search-icon.svg": "/bntngbgs.github.io/newsapp-with-reactjs/static/media/search-icon.5afcea3ebe84d74874d259ee6fc109e9.svg",
-    "main.4f432160.css.map": "/bntngbgs.github.io/newsapp-with-reactjs/static/css/main.4f432160.css.map",
-    "main.6830c834.js.map": "/bntngbgs.github.io/newsapp-with-reactjs/static/js/main.6830c834.js.map"
+    "main.css": "/newsapp-with-reactjs/static/css/main.4f432160.css",
+    "main.js": "/newsapp-with-reactjs/static/js/main.7b14c3ba.js",
+    "index.html": "/newsapp-with-reactjs/index.html",
+    "static/media/search-icon.svg": "/newsapp-with-reactjs/static/media/search-icon.5afcea3ebe84d74874d259ee6fc109e9.svg",
+    "main.4f432160.css.map": "/newsapp-with-reactjs/static/css/main.4f432160.css.map",
+    "main.7b14c3ba.js.map": "/newsapp-with-reactjs/static/js/main.7b14c3ba.js.map"
   },
   "entrypoints": [
     "static/css/main.4f432160.css",
-    "static/js/main.6830c834.js"
+    "static/js/main.7b14c3ba.js"
   ]
 }
