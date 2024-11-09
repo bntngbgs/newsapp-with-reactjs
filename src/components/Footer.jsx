@@ -5,6 +5,7 @@ import { Wrapper } from './styles/Wrapper.styled';
 const FooterWrapper = styled.div`
   background-color: #96ceb4;
   padding-block: 0.35rem;
+  margin-top: auto;
 `;
 
 const FooterText = styled.p`
