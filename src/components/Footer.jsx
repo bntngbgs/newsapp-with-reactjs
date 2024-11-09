@@ -12,7 +12,6 @@ const FooterText = styled.p`
   color: white;
   text-align: center;
   font-size: 1.15rem;
-  font-weight: 700;
 `;
 
 const Footer = () => {
